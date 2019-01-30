@@ -3,9 +3,9 @@ require "pry"
 class CashRegister
   attr_accessor :total, :discount, :items, :last_item_name, :last_item_price
 
-  def initialize(discount=0)
+  def initialize(discount=0.0)
     @total = 0
-    @discount = discount
+    @discount = discount.to_f
     @items = []
     @last_item_name = ""
     @last_item_price = 0;
